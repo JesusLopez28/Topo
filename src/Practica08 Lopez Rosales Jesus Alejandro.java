@@ -15,6 +15,7 @@ class JuegoDelTopo extends JFrame implements ActionListener, MouseListener {
     private static final int MARGEN = 50;
     private static final int TIEMPO_LIMITE = 60;
     private static final int VELOCIDAD = 500;
+    private static final int GOLPES = 3;
 
     private int[] posicionesX;
     private int[] posicionesY;
@@ -241,7 +242,7 @@ class JuegoDelTopo extends JFrame implements ActionListener, MouseListener {
                 reproducirEfectoGolpe();
             }
 
-            if (golpes >= 10) {
+            if (golpes >= GOLPES) {
                 timer.stop();
                 timerTiempo.stop();
                 reproducirGanar();
